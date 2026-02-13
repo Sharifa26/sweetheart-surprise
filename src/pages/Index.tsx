@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import FloatingHearts from "@/components/FloatingHearts";
 import WaveBorders from "@/components/WaveBorders";
+import LockPage from "@/components/pages/LockPage";
 import IntroPage from "@/components/pages/IntroPage";
 import QuizPage from "@/components/pages/QuizPage";
 import FinalPage from "@/components/pages/FinalPage";
@@ -57,7 +58,7 @@ const quizData = [
 ];
 
 const Index = () => {
-  const [page, setPage] = useState(0); // 0=intro, 1-4=quiz, 5=final, 6=celebration
+  const [page, setPage] = useState(-1); // -1=lock, 0=intro, 1-4=quiz, 5=final, 6=celebration
 
   return (
     <div className="pink-grid-bg min-h-screen relative overflow-hidden">
@@ -65,6 +66,8 @@ const Index = () => {
       <WaveBorders />
 
       <AnimatePresence mode="wait">
+        {page === -1 && <LockPage key="lock" onUnlock={() => setPage(0)} />}
+
         {page === 0 && <IntroPage key="intro" onNext={() => setPage(1)} />}
 
         {page >= 1 && page <= 4 && (

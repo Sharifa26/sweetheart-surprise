@@ -54,7 +54,7 @@ const QuizPage = ({ gifUrl, imageUrl, question, options, correctIndex, onCorrect
           <img
             src={mediaSrc}
             alt="Quiz"
-            className="w-44 h-44 mx-auto rounded-2xl object-cover mb-5"
+            className="w-44 h-auto max-h-56 mx-auto rounded-2xl object-contain mb-5"
             loading="eager"
           />
         )}
