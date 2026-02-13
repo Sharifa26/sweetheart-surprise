@@ -79,7 +79,8 @@
   pointer-events: none;
   z-index: 0;
   animation: float-heart linear infinite;
-  color: hsl(340 82% 65% / 0.4);
+  color: hsl(340 82% 65% / 0.5);
+  font-size: 24px;
 }
 
 /* Wave border */
@@ -91,9 +92,9 @@
 .wave-border-top,
 .wave-border-bottom {
   position: fixed;
-  left: 0;
-  right: 0;
-  height: 30px;
+  left: -2px;
+  right: -2px;
+  height: 20px;
   z-index: 10;
   pointer-events: none;
 }
