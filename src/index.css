@@ -2,94 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 340 80% 94%;
+    --foreground: 340 40% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 340 60% 97%;
+    --card-foreground: 340 40% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 340 40% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 340 82% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 340 50% 90%;
+    --secondary-foreground: 340 40% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 340 30% 92%;
+    --muted-foreground: 340 20% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 340 70% 80%;
+    --accent-foreground: 340 40% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 340 40% 88%;
+    --input: 340 40% 88%;
+    --ring: 340 82% 65%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -101,5 +52,134 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
+}
+
+/* Floating hearts */
+@keyframes float-heart {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg) scale(1);
+    opacity: 0;
+  }
+}
+
+.floating-heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  animation: float-heart linear infinite;
+  color: hsl(340 82% 65% / 0.4);
+}
+
+/* Wave border */
+@keyframes wave-move {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 200px; }
+}
+
+.wave-border-top,
+.wave-border-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 30px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.wave-border-top {
+  top: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 30'%3E%3Cpath d='M0,30 Q25,0 50,15 T100,15 T150,15 T200,15 L200,0 L0,0 Z' fill='%23f9a8c9'/%3E%3C/svg%3E") repeat-x;
+  background-size: 200px 30px;
+  animation: wave-move 4s linear infinite;
+}
+
+.wave-border-bottom {
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 30'%3E%3Cpath d='M0,0 Q25,30 50,15 T100,15 T150,15 T200,15 L200,30 L0,30 Z' fill='%23f9a8c9'/%3E%3C/svg%3E") repeat-x;
+  background-size: 200px 30px;
+  animation: wave-move 4s linear infinite reverse;
+}
+
+/* Grid pattern */
+.pink-grid-bg {
+  background-image:
+    linear-gradient(135deg, hsl(340 80% 90%) 0%, hsl(340 70% 92%) 50%, hsl(330 60% 94%) 100%);
+  background-size: cover;
+  position: relative;
+}
+
+.pink-grid-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(hsl(340 60% 85% / 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(340 60% 85% / 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Pulse glow button */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px hsl(340 82% 65% / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(340 82% 65% / 0.7), 0 0 60px hsl(340 82% 65% / 0.3);
+  }
+}
+
+.btn-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Heart burst */
+@keyframes heart-burst {
+  0% { transform: scale(0); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* Heart rain */
+@keyframes heart-rain {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.3;
+  }
+}
+
+.heart-rain {
+  position: fixed;
+  pointer-events: none;
+  z-index: 5;
+  animation: heart-rain linear infinite;
+}
+
+/* Wrong answer overlay */
+.wrong-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
