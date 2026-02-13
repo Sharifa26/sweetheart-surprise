@@ -55,7 +55,7 @@ const LockPage = ({ onUnlock }: Props) => {
         />
 
         <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-          Unlock for You 🔒
+          Unlock your sweet surprise 🔒
         </h2>
         <p className="text-muted-foreground text-sm mb-5">
           Enter the secret PIN to continue
@@ -71,9 +71,7 @@ const LockPage = ({ onUnlock }: Props) => {
             <div
               key={i}
               className={`w-4 h-4 md:w-5 md:h-5 rounded-full border-2 border-primary transition-all duration-200 ${
-                i < entered.length
-                  ? "bg-primary scale-110"
-                  : "bg-transparent"
+                i < entered.length ? "bg-primary scale-110" : "bg-transparent"
               }`}
             />
           ))}
