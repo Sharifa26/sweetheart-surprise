@@ -31,7 +31,7 @@ const FinalPage = ({ onYes }: Props) => {
         whileHover={{ rotate: 0 }}
       >
         <img
-          src="https://media.tenor.com/images/13148168/tenor.gif"
+          src="https://media.tenor.com/sU9__yX0MdIAAAAj/love.gif"
           alt="Love"
           className="w-48 h-48 mx-auto rounded-2xl object-cover mb-6"
           loading="eager"

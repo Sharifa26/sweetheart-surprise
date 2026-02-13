@@ -20,7 +20,7 @@ const IntroPage = ({ onNext }: Props) => (
       transition={{ type: "spring", stiffness: 200 }}
     >
       <motion.img
-        src="https://media.tenor.com/images/22513174/tenor.gif"
+        src="https://media.tenor.com/kt4VBpeTYHUAAAAj/mimibubu.gif"
         alt="Cute panda"
         className="w-40 h-40 mx-auto rounded-2xl object-cover mb-6"
         animate={{ y: [0, -8, 0] }}
