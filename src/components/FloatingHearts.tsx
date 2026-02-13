@@ -6,7 +6,7 @@ const FloatingHearts = () => {
       Array.from({ length: 15 }, (_, i) => ({
         id: i,
         left: Math.random() * 100,
-        size: 12 + Math.random() * 18,
+        size: 18 + Math.random() * 22,
         duration: 8 + Math.random() * 12,
         delay: Math.random() * 10,
       })),
