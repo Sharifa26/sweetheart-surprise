@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import bubuDuduGif from "@/assets/bubu-dudu.gif";
 
 interface Props {
   onUnlock: () => void;
@@ -47,13 +48,10 @@ const LockPage = ({ onUnlock }: Props) => {
         animate={{ rotate: -1 }}
         whileHover={{ rotate: 0, scale: 1.01 }}
       >
-        <motion.img
-          src="https://media.tenor.com/AX1cEf_KBYkAAAAM/bubu-dudu-sseeyall.gif"
+        <img
+          src={bubuDuduGif}
           alt="Bubu Dudu"
-          className="w-28 h-28 md:w-36 md:h-36 mx-auto rounded-2xl object-contain mb-3"
-          animate={{ y: [0, -6, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          loading="eager"
+          className="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-2xl object-contain mb-3"
         />
 
         <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
