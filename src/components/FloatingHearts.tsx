@@ -3,10 +3,10 @@ import { useMemo } from "react";
 const FloatingHearts = () => {
   const hearts = useMemo(
     () =>
-      Array.from({ length: 15 }, (_, i) => ({
+      Array.from({ length: 20 }, (_, i) => ({
         id: i,
-        left: Math.random() * 100,
-        size: 18 + Math.random() * 22,
+        left: (i / 20) * 100 + Math.random() * 5,
+        size: 16 + Math.random() * 18,
         duration: 8 + Math.random() * 12,
         delay: Math.random() * 10,
       })),

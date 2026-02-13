@@ -61,7 +61,7 @@ const Index = () => {
   const [page, setPage] = useState(-1); // -1=lock, 0=intro, 1-4=quiz, 5=final, 6=celebration
 
   return (
-    <div className="pink-grid-bg min-h-screen relative overflow-hidden">
+    <div className="pink-grid-bg h-screen relative overflow-hidden">
       <FloatingHearts />
       <WaveBorders />
 
