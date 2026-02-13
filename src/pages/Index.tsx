@@ -11,7 +11,7 @@ import braceletImg from "@/assets/bracelet.webp";
 
 const quizData = [
   {
-    gifUrl: "https://media.tenor.com/images/16167379/tenor.gif",
+    gifUrl: "https://media.tenor.com/9X_EXRhnImUAAAAj/love-ilu.gif",
     question: "How much do you love me? 💞",
     options: [
       { label: "A", text: "I love you ∞ time" },
@@ -44,7 +44,7 @@ const quizData = [
     correctIndex: 2,
   },
   {
-    gifUrl: "https://media.tenor.com/images/9458162393522689340/tenor.gif",
+    gifUrl: "https://media.tenor.com/g0Ikld3g1TwAAAAj/z.gif",
     question: "Which place I want to visit with you? 🌍",
     options: [
       { label: "A", text: "Maldives 🏝️" },

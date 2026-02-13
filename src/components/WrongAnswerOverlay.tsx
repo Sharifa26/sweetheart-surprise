@@ -14,7 +14,7 @@ const WrongAnswerOverlay = ({ show }: Props) => (
         exit={{ opacity: 0 }}
       >
         <img
-          src="https://media.tenor.com/images/482557620391773062/tenor.gif"
+          src="https://media.tenor.com/BrJjmVscA4YAAAAj/bubu-angry-bubu-fierce.gif"
           alt="Angry"
           className="w-48 h-48 rounded-2xl object-cover"
           loading="eager"

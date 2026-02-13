@@ -49,7 +49,7 @@ const CelebrationPage = () => {
         transition={{ repeat: Infinity, duration: 2 }}
       >
         <motion.img
-          src="https://media.tenor.com/images/12601800/tenor.gif"
+          src="https://media1.tenor.com/m/IkgOfs2_jrUAAAAd/milk-and-mocha-bear-couple.gif"
           alt="Kiss bear"
           className="w-56 h-56 mx-auto rounded-2xl object-cover mb-6"
           animate={{ scale: [1, 1.05, 1] }}
@@ -67,8 +67,8 @@ const CelebrationPage = () => {
           Love you so much chellam 💖✨
         </p>
 
-        <div className="mt-6 text-3xl">
-          💕 😘 ✨ 🌸 💞 💖
+        <div className="mt-6 text-2xl">
+          💕 💖
         </div>
       </motion.div>
     </motion.div>
