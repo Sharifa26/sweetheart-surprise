@@ -48,9 +48,9 @@ const LockPage = ({ onUnlock }: Props) => {
         whileHover={{ rotate: 0, scale: 1.01 }}
       >
         <motion.img
-          src="https://media.tenor.com/AX1cEf_KBYkAAAAj/bubu-dudu-sseeyall.gif"
+          src="https://media.tenor.com/AX1cEf_KBYkAAAAM/bubu-dudu-sseeyall.gif"
           alt="Bubu Dudu"
-          className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-2xl object-cover mb-4"
+          className="w-28 h-28 md:w-36 md:h-36 mx-auto rounded-2xl object-contain mb-3"
           animate={{ y: [0, -6, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           loading="eager"
